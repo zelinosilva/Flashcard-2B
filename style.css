@@ -4,7 +4,7 @@
     --card-back-color: #00F4BF;
 }
 body {
-    background: url('img/bg-desktop.webp');
+    background: url('bg-desktop.webp');
     font-family: Bai Jamjuree;
 }
 
@@ -25,6 +25,8 @@ body {
     /* background-color: aquamarine; */
     height: 100%;
     background-color: var(--card-front-color);
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
 }
 
 .cartao__conteudo h3 {
@@ -36,6 +38,7 @@ body {
     margin: 0.6rem;
     border-radius: 0.6rem;
     font-size: 1vw;
+    backface-visibility: hidden;
 }
 
 .cartao__conteudo p {
@@ -43,7 +46,22 @@ body {
     padding: 2rem;
 }
 
+.cartao:hover 
+    .cartao__conteudo__pergunta{
+        backface-visibility: hidden;
+    }
 
+.cartao__conteudo__resposta {
+    backface-visibility: hidden;
+}
+
+
+
+
+.cartao__conteudo {
+    transform: rotateY(180deg);
+    
+}
 
 
 
