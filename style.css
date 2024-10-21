@@ -14,7 +14,7 @@ body {
 
 .cartao {
     margin: 1rem 1rem;
-    background-color: rgb(32, 120, 22);
+    background-color: rgb(8, 103, 38);
     height: 20rem;
     flex-grow: 1;
     flex-basis: calc(33% - 6rem);
@@ -58,12 +58,13 @@ body {
 
 
 
-.cartao__conteudo {
+.cartao:hover .cartao__conteudo {
     transform: rotateY(180deg);
-    
 }
 
-
+.cartao__conteudo__resposta {
+    transform: rotateY(180deg);
+}
 
 
 
@@ -76,6 +77,13 @@ footer {
     height: 2rem;
 }
 
+.cartao__conteudo__pergunta,
+.cartao__conteudo__resposta {
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
 footer p {
     text-align: center;
     font-size: 0.6rem;
